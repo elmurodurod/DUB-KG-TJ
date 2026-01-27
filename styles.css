@@ -1,0 +1,149 @@
+:root {
+    --text: #0d1321;
+    --muted: #1f2022;
+    --wa: #25D366;
+    --tg: #229ED9;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Inter, system-ui, Segoe UI, Roboto, Arial
+}
+
+.bg {
+    position: fixed;
+    inset: 0;
+    background: url('assets/bg.jpg') center/cover no-repeat fixed;
+}
+
+.shell {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 16px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, .25), rgba(255, 255, 255, .35));
+}
+
+.card {
+    width: min(680px, 100%);
+    background: rgba(255, 255, 255, .4);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, .25);
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    height: 84px;        /* было 56px — теперь больше */
+    margin-bottom: -49px; /* чуть больше отступа */
+}
+
+/* адаптивно под мобильные */
+@media (max-width: 740px) {
+    .logo {
+        height: 195px;
+    }
+}
+
+.title {
+    font-size: 28px;
+    margin: 8px 0;
+    font-weight: 700
+}
+
+.sub {
+    color: var(--muted);
+    margin: 0 0 18px
+}
+
+.actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 18px 0 20px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 20px;
+    min-width: 220px;
+    height: 54px;
+    border-radius: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .12), inset 0 -2px 0 rgba(0, 0, 0, .12);
+    transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.btn.wa {
+    background: linear-gradient(180deg, #2fe071 0%, #18b457 100%)
+}
+
+.btn.tg {
+    background: linear-gradient(180deg, #35b3e6 0%, #1e8fc7 100%)
+}
+
+.btn img {
+    width: 22px;
+    height: 22px
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .18), inset 0 -2px 0 rgba(0, 0, 0, .18)
+}
+
+.manager {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    border-top: 1px dashed rgba(0, 0, 0, .1);
+    padding-top: 10px
+}
+
+.avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(0, 0, 0, .1)
+}
+
+.m-info {
+    text-align: left
+}
+
+.m-name {
+    font-weight: 700
+}
+
+.m-role {
+    color: var(--muted);
+    font-size: 14px
+}
+
+@media(max-width:720px) {
+    .title {
+        font-size: 24px
+    }
+    .btn {
+        min-width: 180px;
+        height: 50px;
+        padding: 12px 18px
+    }
+}
