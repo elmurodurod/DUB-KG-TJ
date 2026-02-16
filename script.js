@@ -1,4 +1,4 @@
-const MANAGER = { name: 'Андрей', role: 'Менеджер по подбору персонала', photo: 'assets/manager-neutral.jpg', whatsapp: '48575571174', telegram: 'andrew_oae_work' };
+const MANAGER = { name: 'Виктория', role: 'Менеджер по подбору персонала', photo: 'assets/manager-neutral.jpg', whatsapp: '48795659432', telegram: 'viktoria_oae' };
 const DEFAULT_WA_TEXT = 'Здравствуйте! Хочу вакансии в Дубае.';
 
 function waLink(n, t) { return 'https://wa.me/' + encodeURIComponent(n) + '?text=' + encodeURIComponent(t || DEFAULT_WA_TEXT) }
