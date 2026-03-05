@@ -18,7 +18,7 @@ const MANAGERS = [
         name: 'Андрей', 
         role: 'Менеджер по подбору персонала', 
         photo: 'assets/manager-3.jpg', 
-        whatsapp: '48575571174', 
+        whatsapp: '48791306492', 
         telegram: 'andrew_oae_work' 
     }
 ];
